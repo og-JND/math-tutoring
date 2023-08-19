@@ -15,7 +15,7 @@
 
 <body class="bg-myWhite font-body text-myBlack">
 
-    <section id="desktop-menu" class="sticky top-0">
+    <section id="desktop-menu" class="sticky top-0 z-10">
         <nav class="bg-white flex justify-between text-xl px-2 py-2">
             <div class="font-logo self-end">Re:Think</div>
 
@@ -26,17 +26,18 @@
     </section>
 
     <section id="mobile-menu"
-        class="cursor-pointer fixed top-0 w-full bg-myWhite flex-col justify-center items-center origin-top animate-open-menu hidden z-10">
+        class="cursor-pointer fixed top-0 w-full bg-myWhite flex-col justify-center items-center origin-top animate-open-menu hidden z-20">
         <button class="text-8xl self-end px-6">&times;</button>
         <nav class="flex flex-col min-h-screen py-8 items-center text-3xl" aria-label="mobile">
-            <a href="#" class="w-full text-center hover:text-mySkyblue duration-200 py-5">Home</a>
-            <a href="#" class="w-full text-center hover:text-mySkyblue duration-200 py-5">Home</a>
-            <a href="#" class="w-full text-center hover:text-mySkyblue duration-200 py-5">Home</a>
-            <a href="#" class="w-full text-center hover:text-mySkyblue duration-200 py-5">Home</a>
+            <a href="#hero" class="w-full text-center hover:text-mySkyblue duration-200 py-5">Home</a>
+            <a href="#intro-card" class="w-full text-center hover:text-mySkyblue duration-200 py-5">Who am I?</a>
+            <a href="#achievements" class="w-full text-center hover:text-mySkyblue duration-200 py-5">My Achievements</a>
+            <a href="#how-does-it-work" class="w-full text-center hover:text-mySkyblue duration-200 py-5">How does it work?</a>
+            <a href="#contact" class="w-full text-center hover:text-mySkyblue duration-200 py-5">Contact me</a>
         </nav>
     </section>
 
-    <div class="bg-gradient-to-br from-grad1 via-grad2 to-grad3 h-screen flex flex-col justify-center px-3">
+    <div id="hero" class="bg-gradient-to-br from-grad1 via-grad2 to-grad3 h-screen flex flex-col justify-center px-3">
         <p class="font-hTitle text-5xl py-5">
             Mastering <span class="font-bold">Math</span>, One Lesson at a Time
         </p>
@@ -45,53 +46,106 @@
             guide
         </p>
     </div>
-    <main class="px-2">
+    <main class="px-2 ">
 
-        <div id="intro-card" class="bg-white mt-16 flex flex-col p-3 mx-3">
+        <div id="intro-card" class=" mt-16 flex flex-col p-3 ">
             <div class="bg-black h-56">
                 <img src="img/Headshot_1.jpg" class="h-full w-full object-cover object-center" alt="A picture of me">
             </div>
-            <div class=" px-3 self-center">
-                <p class="text-2xl text-myBlue font-semibold py-2">
+            <div class=" px- self-center">
+                <p class="text-2xl text-mySkyblue py-2">
                     Hi there!
                 </p>
                 <p>
-                    I'm Jedidiah, it's a pleasure to be your companion on this thrilling learning journey. With a
+                    My name is Jedidiah. I am a cs major at Ontario Tech and I'll be your companion on this thrilling learning journey. With a
                     passion for education and a strong grasp of mathematics, I will provide you with the
                     tools and knowledge to conquer the world of arithmetic.
                 </p>
             </div>
         </div>
 
-        
+        <!-- my achievements section -->
+        <div id="achievements" class="mt-16 p-3 relative z-0">
+            <div class="pb-4">
+                <p class="text-myBlue text-2xl font-semibold py-2">My achievements</p>
+                <p>Here are some of my achievements from High school</p>
+            </div>
+            <div class="grid grid-cols-1 gap-3 md:grid-cols-2 md:container md:mx-auto">
+                <div class="h-72 bg-black hidden duration-300" id="img2">
+                    <img src="img/SAT2.png" class="w-full h-full object-cover" alt="">
+                </div>
+                <div class="h-72 bg-black duration-300" id="img1">
+                    <img src="img/WAEC.png" class="w-full h-full object-cover" alt="">
+                </div>
+                <button
+                    class="bg-mySkyblue w-fit justify-self-center px-2 py-1 rounded-lg hover:text-white duration-300 border border-myBlue absolute bottom-4 opacity-90"
+                    id="switcher">More</button>
+            </div>
+        </div>
+
+        <div id="how-does-it-work" class="mt-16 p-3">
+            <p class="text-myBlue text-2xl font-semibold py-2">
+                My Approach to Tutoring
+            </p>
+            <p>
+                My tutoring philosophy revolves around the belief that every student has the potential to excel. I'm
+                committed to tailoring our lessons to your unique learning style and pace, ensuring that each step we
+                take is a step toward mastery.
+                I am currently only taking grade 9 and 10 students both in-person (Surrey only) and online tutoring in classes of
+                three.
+
+            <div class="font-semibold text-mySkyblue">
+                Mon - Fri: 12:00 pm to 3:00 pm. <br>
+                $19.00/hr (online) $26.00/hr (in-person)
+            </div>
+            </p>
+        </div>
+
+        <div id="contact" class="mt-16 p-3">
+            <p class="text-myBlue text-2xl font-semibold py-2">
+                Contact Me
+            </p>
+            <p>
+                Send an email with your name, online or in-person tutoring and any other details to:
+                <br>
+                <span class="flex justify-center py-2">
+                    <button
+                    class="bg-mySkyblue w-fit px-2 py-1 rounded-lg hover:text-white duration-300 border border-myBlue"
+                    id="contact">&#9993; Email me</button>
+                </span>
+            </p>
+        </div>
+
     </main>
 
     <footer class="static w-full bottom-0 bg-gray-300 text-gray-700 text-center p-2 mt-4" id="foot">
-        © 2020 Copyright. Built by Jedidiah
+        © 2023 Copyright. Built by Jedidiah.
     </footer>
 
     <script>
-        import {
-            Collapse,
-            Dropdown,
-            Ripple,
-            Carousel,
-            initTE
-        } from 'tw-elements';
-
-        initTE({ Collapse, Dropdown, Ripple, Carousel });
         let hamburbur = document.querySelector("#hamburbur")
+        let img1 = document.querySelector("#img1")
+        let img2 = document.querySelector("#img2")
+        let switcher = document.querySelector("#switcher")
         let menu = document.querySelector("#mobile-menu")
         function toggleMenu(params) {
             menu.classList.toggle('hidden')
             menu.classList.toggle('flex')
         }
+        function togglePicture(params) {
+            img1.classList.toggle('hidden')
+            img2.classList.toggle('hidden')
+        }
         hamburbur.addEventListener("click", () => {
             toggleMenu()
+        })
+        switcher.addEventListener("click", () => {
+            togglePicture()
         })
         menu.addEventListener("click", () => {
             toggleMenu()
         })
+
     </script>
 </body>
 
