@@ -19,7 +19,14 @@
         <nav class="bg-white flex justify-between text-xl px-2 py-2">
             <div class="font-logo self-end">Re:Think</div>
 
-            <div class="flex text-2xl cursor-pointer">
+            <div class="hidden lg:flex lg:justify-between lg:space-x-4 lg:px-4 lg:font-light">
+                <a href="#hero" class="hover:text-mySkyblue duration-200">Home</a>
+                <a href="#intro-card" class="hover:text-mySkyblue duration-200">Who I Am</a>
+                <a href="#achievements" class="hover:text-mySkyblue duration-200">My Achievements</a>
+                <a href="#how-does-it-work" class="hover:text-mySkyblue duration-200">How I work</a>
+                <a href="#contact" class="hover:text-mySkyblue duration-200">Contact me</a>
+            </div>
+            <div class="flex text-2xl cursor-pointer lg:hidden">
                 <div id="hamburbur">&#9776</div>
             </div>
         </nav>
@@ -32,12 +39,13 @@
             <a href="#hero" class="w-full text-center hover:text-mySkyblue duration-200 py-5">Home</a>
             <a href="#intro-card" class="w-full text-center hover:text-mySkyblue duration-200 py-5">Who am I?</a>
             <a href="#achievements" class="w-full text-center hover:text-mySkyblue duration-200 py-5">My Achievements</a>
-            <a href="#how-does-it-work" class="w-full text-center hover:text-mySkyblue duration-200 py-5">How does it work?</a>
+            <a href="#how-does-it-work" class="w-full text-center hover:text-mySkyblue duration-200 py-5">How I work</a>
             <a href="#contact" class="w-full text-center hover:text-mySkyblue duration-200 py-5">Contact me</a>
         </nav>
     </section>
 
-    <div id="hero" class="bg-gradient-to-br from-grad1 via-grad2 to-grad3 h-screen flex flex-col justify-center px-3">
+    <div id="hero"
+        class="bg-gradient-to-br from-grad1 via-grad2 to-grad3 h-screen flex flex-col justify-center px-3 relative md:items-center">
         <p class="font-hTitle text-5xl py-5">
             Mastering <span class="font-bold">Math</span>, One Lesson at a Time
         </p>
@@ -45,19 +53,21 @@
             Whether you're looking to master problem-solving or simply gain more confidence in your skills, I'll be your
             guide
         </p>
+        <img src="img/down-arrow-svgrepo-com.svg" class="absolute bottom-10 self-center h-6 w-10" alt="">
     </div>
-    <main class="px-2 ">
+    <main class="px-2 lg:w-3/4 md:mx-auto">
 
-        <div id="intro-card" class=" mt-16 flex flex-col p-3 ">
-            <div class="bg-black h-56">
+        <div id="intro-card" class=" mt-16 flex flex-col md:flex-row md:w-full p-3 shadow-lg bg-slate-100">
+            <div class="bg-black h-56 md:w-2/5 md:h-96">
                 <img src="img/Headshot_1.jpg" class="h-full w-full object-cover object-center" alt="A picture of me">
             </div>
-            <div class=" px- self-center">
-                <p class="text-2xl text-mySkyblue py-2">
+            <div class=" px-2 self-center md:text-center md:w-3/5 md:ml-3">
+                <p class="text-2xl md:text-3xl text-mySkyblue py-2">
                     Hi there!
                 </p>
-                <p>
-                    My name is Jedidiah. I am a cs major at Ontario Tech and I'll be your companion on this thrilling learning journey. With a
+                <p class="md:text-lg">
+                    My name is Jedidiah. I am a cs major at Ontario Tech and I'll be your companion on this thrilling
+                    learning journey. With a
                     passion for education and a strong grasp of mathematics, I will provide you with the
                     tools and knowledge to conquer the world of arithmetic.
                 </p>
@@ -65,17 +75,17 @@
         </div>
 
         <!-- my achievements section -->
-        <div id="achievements" class="mt-16 p-3 relative z-0">
+        <div id="achievements" class="mt-16 p-3 relative z-0 md:mx-auto md:text-center shadow-lg bg-slate-100">
             <div class="pb-4">
-                <p class="text-myBlue text-2xl font-semibold py-2">My achievements</p>
+                <p class="text-myBlue text-4xl font-semibold py-2">My achievements</p>
                 <p>Here are some of my achievements from High school</p>
             </div>
-            <div class="grid grid-cols-1 gap-3 md:grid-cols-2 md:container md:mx-auto">
-                <div class="h-72 bg-black hidden duration-300" id="img2">
-                    <img src="img/SAT2.png" class="w-full h-full object-cover" alt="">
+            <div class="grid grid-cols-1 gap-3 md:flex md:justify-center">
+                <div class="h-72 lg:h-96 bg-black " id="img2">
+                    <img src="img/SAT2.png" class="w-full h-full object-cover object-left md:object-center" alt="">
                 </div>
-                <div class="h-72 bg-black duration-300" id="img1">
-                    <img src="img/WAEC.png" class="w-full h-full object-cover" alt="">
+                <div class="h-72 lg:h-96 bg-black hidden" id="img1">
+                    <img src="img/WAEC.png" class="w-full h-full object-cover object-right md:object-center" alt="">
                 </div>
                 <button
                     class="bg-mySkyblue w-fit justify-self-center px-2 py-1 rounded-lg hover:text-white duration-300 border border-myBlue absolute bottom-4 opacity-90"
@@ -83,7 +93,7 @@
             </div>
         </div>
 
-        <div id="how-does-it-work" class="mt-16 p-3">
+        <div id="how-does-it-work" class="mt-16 p-3 md:mx-auto md:text-center shadow-lg bg-slate-100">
             <p class="text-myBlue text-2xl font-semibold py-2">
                 My Approach to Tutoring
             </p>
@@ -91,17 +101,18 @@
                 My tutoring philosophy revolves around the belief that every student has the potential to excel. I'm
                 committed to tailoring our lessons to your unique learning style and pace, ensuring that each step we
                 take is a step toward mastery.
-                I am currently only taking grade 9 and 10 students both in-person (Surrey only) and online tutoring in classes of
+                I am currently only taking grade 9 and 10 students both in-person (Surrey only) and online tutoring in
+                classes of
                 three.
 
             <div class="font-semibold text-mySkyblue">
-                Mon - Fri: 12:00 pm to 3:00 pm. <br>
+                Mon - Fri: 12:00 pm to 2:00 pm. <br>
                 $19.00/hr (online) $26.00/hr (in-person)
             </div>
             </p>
         </div>
 
-        <div id="contact" class="mt-16 p-3">
+        <div id="contact" class="mt-16 p-3 md:mx-auto md:text-center shadow-lg bg-slate-100">
             <p class="text-myBlue text-2xl font-semibold py-2">
                 Contact Me
             </p>
@@ -110,8 +121,8 @@
                 <br>
                 <span class="flex justify-center py-2">
                     <button
-                    class="bg-mySkyblue w-fit px-2 py-1 rounded-lg hover:text-white duration-300 border border-myBlue"
-                    id="contact">&#9993; Email me</button>
+                        class="bg-mySkyblue w-fit px-2 py-1 rounded-lg hover:text-white duration-300 border border-myBlue"
+                        id="contact">&#9993; Email me</button>
                 </span>
             </p>
         </div>
